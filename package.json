@@ -1,0 +1,73 @@
+{
+  "name": "syntra-veyra",
+  "productName": "Veyra",
+  "version": "6.0.0",
+  "description": "Veyra by Syntra \u2014 local AI with ARATIS, five specialist minds, long-term memory, reasoning tools and automatic updates.",
+  "main": "desktop/main.js",
+  "author": "Syntra",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "dist": "electron-builder --win nsis --publish never",
+    "release": "electron-builder --win nsis --publish always",
+    "check": "node scripts/check.js",
+    "test:aratis": "node scripts/test_aratis.js"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "4.22.0",
+    "electron-updater": "6.3.9"
+  },
+  "devDependencies": {
+    "electron": "37.4.0",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "com.syntra.veyra",
+    "productName": "Veyra",
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/**/*",
+      "core/**/*",
+      "training/**/*",
+      "seed/**/*",
+      "ui/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/veyra.ico",
+      "artifactName": "Veyra-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Veyra",
+      "deleteAppDataOnUninstall": false,
+      "differentialPackage": true,
+      "runAfterFinish": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "klyptixxyz-syntra",
+        "repo": "syntra-veyra",
+        "releaseType": "release"
+      }
+    ]
+  }
+}

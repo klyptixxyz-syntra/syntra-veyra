@@ -1,0 +1,98 @@
+User: what is an atom
+Assistant: An atom is a basic unit of matter containing a nucleus with protons and usually neutrons, surrounded by electrons.
+
+User: what is a molecule
+Assistant: A molecule is a group of atoms chemically bonded together.
+
+User: what is gravity
+Assistant: Gravity is the attraction between objects with mass.
+
+User: what is energy
+Assistant: Energy is a measurable property associated with the ability to cause change or perform work.
+
+User: what is force
+Assistant: Force is a push or pull that can change an object's motion.
+
+User: what is speed
+Assistant: Speed describes how much distance is covered per unit of time.
+
+User: what is velocity
+Assistant: Velocity describes speed together with direction.
+
+User: what is acceleration
+Assistant: Acceleration is the rate at which velocity changes over time.
+
+User: what is photosynthesis
+Assistant: Photosynthesis is the process in which plants and some other organisms use light energy to make chemical energy from carbon dioxide and water.
+
+User: what is respiration
+Assistant: Cellular respiration is the process cells use to release usable energy from nutrients.
+
+User: what is DNA
+Assistant: DNA is a molecule that stores genetic information used in the growth, function, and reproduction of living organisms.
+
+User: what is a cell
+Assistant: A cell is the smallest structural and functional unit of living organisms.
+
+User: what is an ecosystem
+Assistant: An ecosystem includes living organisms and the nonliving environment they interact with.
+
+User: what is pH
+Assistant: pH is a scale used to describe how acidic or basic an aqueous solution is.
+
+User: what is an acid
+Assistant: An acid is a substance that can donate protons or increase hydrogen ion concentration in water, depending on the chemical definition being used.
+
+User: what is a base
+Assistant: A base can accept protons or increase hydroxide ion concentration in water, depending on the chemical definition being used.
+
+User: what is evaporation
+Assistant: Evaporation is the change of a liquid into gas from its surface.
+
+User: what is condensation
+Assistant: Condensation is the change of a gas into a liquid.
+
+User: what is the water cycle
+Assistant: The water cycle describes the movement of water through evaporation, condensation, precipitation, collection, and related processes.
+
+User: what is a computer
+Assistant: A computer is a programmable machine that processes data according to instructions.
+
+User: what is RAM
+Assistant: RAM is working memory used to hold data that programs need quickly while they are running.
+
+User: what is storage
+Assistant: Storage keeps files and data for longer periods, usually on devices such as SSDs or hard drives.
+
+User: what is a CPU
+Assistant: A CPU executes program instructions and performs general-purpose calculations and control tasks.
+
+User: what is a GPU
+Assistant: A GPU performs many calculations in parallel and is commonly used for graphics and some numerical workloads such as machine learning.
+
+User: what is a server
+Assistant: A server is a program or computer that provides data or services to other programs or devices.
+
+User: what is the internet
+Assistant: The internet is a worldwide network of interconnected computer networks that communicate using standard protocols.
+
+User: what is a database
+Assistant: A database stores organized data so applications can retrieve, update, and manage it.
+
+User: what is an algorithm
+Assistant: An algorithm is a defined sequence of steps used to solve a problem or perform a task.
+
+User: what is artificial intelligence
+Assistant: Artificial intelligence is a broad field focused on systems that perform tasks associated with perception, prediction, reasoning, language, planning, or decision support.
+
+User: what is machine learning
+Assistant: Machine learning uses data to adjust a model so it can make predictions or decisions without writing a separate fixed rule for every case.
+
+User: what is a neural network
+Assistant: A neural network is a mathematical model made from connected numerical operations whose weights are adjusted during training.
+
+User: what is a language model
+Assistant: A language model assigns probabilities to sequences of tokens and can generate text by repeatedly predicting what token should come next.
+
+User: what is a token
+Assistant: A token is a unit of text used by a language model. A token can represent a word, part of a word, punctuation, or another text unit.

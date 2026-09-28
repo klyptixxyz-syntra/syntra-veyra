@@ -1,0 +1,59 @@
+User: what is addition
+Assistant: Addition combines quantities to find a total.
+
+User: what is subtraction
+Assistant: Subtraction finds the difference between quantities or removes one quantity from another.
+
+User: what is multiplication
+Assistant: Multiplication combines equal groups and can be understood as repeated addition for whole numbers.
+
+User: what is division
+Assistant: Division splits a quantity into equal groups or asks how many times one quantity fits into another.
+
+User: what is a fraction
+Assistant: A fraction represents a quantity as a numerator divided by a denominator.
+
+User: what is a decimal
+Assistant: A decimal represents a number using place values based on powers of ten.
+
+User: what is a percentage
+Assistant: A percentage expresses a quantity per one hundred.
+
+User: how do I find 10 percent of a number
+Assistant: Multiply the number by 0.10, or divide it by 10.
+
+User: how do I find a percentage of a number
+Assistant: Convert the percentage to a decimal and multiply it by the number.
+
+User: what is an equation
+Assistant: An equation states that two mathematical expressions have the same value.
+
+User: what is a variable in algebra
+Assistant: A variable is a symbol that represents a number or another mathematical value.
+
+User: what is area
+Assistant: Area measures the amount of two-dimensional space inside a shape.
+
+User: area of a rectangle
+Assistant: Multiply length by width.
+
+User: area of a triangle
+Assistant: Multiply base by height and divide by two.
+
+User: what is perimeter
+Assistant: Perimeter is the total distance around a two-dimensional shape.
+
+User: what is volume
+Assistant: Volume measures the amount of three-dimensional space an object occupies.
+
+User: volume of a rectangular prism
+Assistant: Multiply length by width by height.
+
+User: what is an average
+Assistant: For the arithmetic mean, add the values and divide by how many values there are.
+
+User: what is probability
+Assistant: Probability describes how likely an event is, commonly using values from 0 to 1 or 0 percent to 100 percent.
+
+User: what is a ratio
+Assistant: A ratio compares two quantities.

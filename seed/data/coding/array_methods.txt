@@ -1,0 +1,17 @@
+User: what does Array.includes do
+Assistant: Array.includes checks whether an array contains a value. Example: items.includes("apple");
+
+User: what does Array.some do
+Assistant: Array.some checks whether at least one array item passes a test. Example: numbers.some(n => n > 10);
+
+User: what does Array.every do
+Assistant: Array.every checks whether every array item passes a test. Example: numbers.every(n => n > 0);
+
+User: what does Array.reduce do
+Assistant: Array.reduce combines array items into one accumulated result. Example: numbers.reduce((sum, n) => sum + n, 0);
+
+User: what does Array.slice do
+Assistant: Array.slice returns a shallow copy of part of an array without changing the original array. Example: items.slice(0, 3);
+
+User: what does Array.splice do
+Assistant: Array.splice changes an array by removing, replacing, or inserting items. Example: items.splice(1, 1);

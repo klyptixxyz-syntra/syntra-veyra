@@ -1,0 +1,59 @@
+User: npm is not recognized
+Assistant: Node.js or npm is not installed correctly or its install folder is not in PATH. Install Node.js, reopen the terminal, then run node -v and npm -v.
+
+User: node is not recognized
+Assistant: Install Node.js, close and reopen Command Prompt, then run node -v to verify that Windows can find it.
+
+User: localhost is not opening
+Assistant: Make sure the Node.js server is still running, confirm the port shown in the terminal, and check whether another program is already using that port.
+
+User: port 3000 is already in use
+Assistant: Close the other program using port 3000 or start this app with a different PORT environment variable.
+
+User: why does the command window have to stay open
+Assistant: The Node.js process is the local server. Closing its terminal stops the process and the browser can no longer reach it.
+
+User: why does my page say connection refused
+Assistant: The local server is probably not running on that address and port. Start it and check the terminal for errors.
+
+User: why is my JSON file invalid
+Assistant: Common causes are missing commas, extra commas, unescaped quotes, comments, or unmatched braces and brackets.
+
+User: why does fetch fail
+Assistant: Check the URL, server status, browser console, network request, CORS rules, and whether the response format matches what your code expects.
+
+User: why is my variable undefined
+Assistant: Check whether it was assigned before use, whether the property name is correct, and whether scope prevents access at that location.
+
+User: why does my button do nothing
+Assistant: Confirm the element exists, the event listener is attached after the element is available, and the handler does not throw an error.
+
+User: why is my CSS not applying
+Assistant: Check selector spelling, stylesheet loading, specificity, invalid CSS, and whether another rule overrides the property.
+
+User: why is my JavaScript not running
+Assistant: Open the browser console, check for syntax or runtime errors, confirm the script path, and verify when the script is loaded.
+
+User: why is localStorage empty
+Assistant: Check that you are using the same site origin, that the key name matches exactly, and that the browser did not clear site data.
+
+User: why is my file path wrong
+Assistant: Relative paths are resolved from a specific working location. Print the working directory and use path.join in Node.js to avoid manual separator mistakes.
+
+User: how do I debug code
+Assistant: Reproduce the problem, read the first relevant error, isolate the smallest failing part, inspect values, change one thing, and test again.
+
+User: how do I find a bug faster
+Assistant: Reduce the problem to a small reproducible case and verify assumptions with logs or a debugger instead of changing many unrelated things.
+
+User: why is my app slow
+Assistant: Measure before guessing. Look for repeated expensive work, large loops, excessive DOM updates, unnecessary allocations, and work happening every frame.
+
+User: why does the browser freeze
+Assistant: A long synchronous loop or heavy calculation is blocking the main thread. Break the work into smaller pieces or move suitable work away from the UI thread.
+
+User: why does training take a long time
+Assistant: Training repeatedly performs many numerical operations across every example. Model size, vocabulary size, dataset size, and CPU speed directly affect training time.
+
+User: can I stop training safely
+Assistant: Yes if the trainer saves a checkpoint before exit. This project also saves periodic checkpoints so completed progress is not lost.

@@ -1,0 +1,74 @@
+User: what is HTML
+Assistant: HTML is a markup language used to describe the structure and content of a web page.
+
+User: what is CSS
+Assistant: CSS controls presentation such as layout, spacing, typography, and responsive behavior.
+
+User: what is JavaScript used for on websites
+Assistant: JavaScript handles behavior and logic such as interactions, data loading, state changes, and dynamic updates.
+
+User: how do I make a button in HTML
+Assistant: Use <button type="button">Click me</button>.
+
+User: how do I make a link in HTML
+Assistant: Use an anchor element such as <a href="https://example.com">Example</a>.
+
+User: how do I make an image in HTML
+Assistant: Use an img element with src and alt, for example: <img src="photo.jpg" alt="Description">.
+
+User: how do I make an input in HTML
+Assistant: Use an input element, for example: <input type="text" name="username">.
+
+User: how do I make a form
+Assistant: Use a form element containing labeled inputs and a submit button.
+
+User: what is semantic HTML
+Assistant: Semantic HTML uses elements whose names describe their meaning, such as header, nav, main, section, article, and footer.
+
+User: what is flexbox
+Assistant: Flexbox is a CSS layout system for arranging items along one main direction with alignment and spacing controls.
+
+User: what is CSS grid
+Assistant: CSS Grid is a two-dimensional layout system for arranging rows and columns.
+
+User: how do I center with flexbox
+Assistant: On a flex container, use display:flex; justify-content:center; align-items:center;
+
+User: how do I make a responsive layout
+Assistant: Use flexible widths, grid or flex layouts, relative units, and media queries where the layout actually needs to change.
+
+User: what is a media query
+Assistant: A media query applies CSS only when conditions such as viewport width match.
+
+User: what is a CSS variable
+Assistant: A CSS custom property stores a reusable value, for example --space: 16px; and var(--space).
+
+User: how do I remove default body margin
+Assistant: Use body { margin: 0; }.
+
+User: how do I make an element fill the screen
+Assistant: Use min-height: 100vh for viewport height, or 100dvh when you want dynamic mobile viewport behavior.
+
+User: how do I hide overflow
+Assistant: Use overflow: hidden; but only when clipping content is intended.
+
+User: what is z-index
+Assistant: z-index controls stacking order for positioned or stacking-context elements.
+
+User: why is z-index not working
+Assistant: Check whether the element participates in a stacking context and whether another ancestor creates a separate stacking context.
+
+User: what is canvas
+Assistant: The HTML canvas element provides a bitmap drawing surface controlled with JavaScript.
+
+User: how do I make canvas sharp on high DPI screens
+Assistant: Size the backing canvas using devicePixelRatio, then scale the drawing context so CSS pixels remain convenient.
+
+User: what is requestAnimationFrame
+Assistant: requestAnimationFrame schedules a callback before the browser paints the next animation frame.
+
+User: how do I make a game loop
+Assistant: Use requestAnimationFrame, calculate elapsed time, update game state, render, then request the next frame.
+
+User: what is event.preventDefault
+Assistant: preventDefault stops the browser's default action for an event when that action is cancelable.

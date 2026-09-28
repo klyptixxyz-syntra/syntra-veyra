@@ -1,0 +1,44 @@
+name: Build and Publish Veyra
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, for example 6.0.0 or 6.0.1"
+        required: true
+        default: "6.0.0"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Veyra
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Set release version
+        shell: powershell
+        run: npm version "${{ inputs.version }}" --no-git-tag-version --allow-same-version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate source
+        run: npm run check
+
+      - name: Test ARATIS
+        run: npm run test:aratis
+
+      - name: Build and publish Windows installer
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run release

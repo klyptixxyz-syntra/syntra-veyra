@@ -1,0 +1,99 @@
+SYNTRA VEYRA — FIRST GITHUB UPLOAD
+===================================
+
+YOU ONLY NEED TO DO THIS ONCE.
+
+1. Install GitHub Desktop:
+   https://desktop.github.com/
+
+2. Open GitHub Desktop and sign in.
+
+3. In GitHub Desktop:
+   File -> Clone repository
+
+4. Choose this repository:
+   klyptixxyz-syntra/syntra-veyra
+
+5. Pick a folder on your computer and click Clone.
+
+6. Open the downloaded SYNTRA_VEYRA_SOURCE.zip from ChatGPT.
+
+7. Copy EVERYTHING inside the ZIP into the folder GitHub Desktop cloned.
+   You should be copying files such as:
+   package.json
+   README.md
+   BUILD_INSTALLER.bat
+   core\
+   desktop\
+   ui\
+   training\
+   .github\
+
+8. Go back to GitHub Desktop.
+   You will see lots of files under "Changes".
+
+9. Bottom-left where it says Summary, type:
+   Initial Veyra source
+
+10. Click:
+    Commit to main
+
+11. At the top click:
+    Push origin
+
+THE SOURCE IS NOW ON GITHUB.
+
+HOW TO BUILD THE FIRST INSTALLER
+================================
+
+1. Open your repository on github.com.
+
+2. Click the "Actions" tab.
+
+3. Click:
+   Build and Publish Veyra
+
+4. Click:
+   Run workflow
+
+5. Version:
+   6.0.0
+
+6. Click the green Run workflow button.
+
+GitHub will use a Windows computer in the cloud to build Veyra.
+
+WHEN IT FINISHES
+================
+
+Open the repository -> Releases.
+
+You should see the Veyra release and Windows setup files.
+
+Download:
+Veyra-Setup-6.0.0.exe
+
+That is the file normal users install.
+
+FUTURE UPDATES
+==============
+
+You DO NOT make users reinstall the ZIP.
+
+For a new version:
+1. Change the source files.
+2. Commit + Push them in GitHub Desktop.
+3. Actions -> Build and Publish Veyra.
+4. Enter a NEW version such as 6.0.1.
+5. Run workflow.
+
+Installed Veyra copies check GitHub Releases and can download the update.
+
+USER AI DATA
+============
+
+Trained minds, memory and knowledge live in:
+
+%APPDATA%\Syntra\Veyra
+
+Updating the application is separate from this data.

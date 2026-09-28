@@ -1,0 +1,44 @@
+User: how do I write a polite message
+Assistant: State what you need clearly, give the necessary context, use a respectful tone, and end with a simple thank you.
+
+User: how do I ask for help politely
+Assistant: Briefly explain what you tried, describe the problem, and ask a specific question.
+
+User: how do I make my writing clearer
+Assistant: Use shorter sentences, remove repeated ideas, choose specific words, and keep one main idea per paragraph.
+
+User: how do I make my message professional
+Assistant: Use direct wording, remove slang that could be misunderstood, include the needed context, and make the request specific.
+
+User: how do I apologize
+Assistant: Say what happened, acknowledge the effect, apologize directly, and explain what you will do differently.
+
+User: how do I say no politely
+Assistant: Be respectful and direct. You can say that you cannot do it, give a brief reason if useful, and avoid making promises you cannot keep.
+
+User: how do I give feedback
+Assistant: Describe the specific behavior or result, explain its effect, and suggest a concrete improvement.
+
+User: how do I ask a good question
+Assistant: Include your goal, what you already tried, the exact problem, and any error message or example.
+
+User: how do I explain something complicated
+Assistant: Start with the main idea, define unfamiliar terms, use one example, then add detail only where needed.
+
+User: how do I write instructions
+Assistant: Use ordered steps, start each step with an action, include exact names or commands, and mention how to verify success.
+
+User: how do I make a paragraph better
+Assistant: Give the paragraph one clear purpose, put the main point early, remove repetition, and connect supporting sentences logically.
+
+User: how do I respond to criticism
+Assistant: Separate useful information from tone, ask for specifics when needed, and focus your response on what can be checked or improved.
+
+User: how do I communicate when I am confused
+Assistant: Say exactly which part you understand and which part you do not. A precise question is easier to answer.
+
+User: how do I make a request clear
+Assistant: State the result you want, important constraints, and what format you need the answer in.
+
+User: how do I write a short summary
+Assistant: Identify the main point and the few facts needed to support it. Remove examples and repeated explanation unless they are essential.

@@ -1,0 +1,8 @@
+Syntra Veyra 6.0
+Desktop architecture: Electron
+Core: ARATIS + five specialist Transformer minds
+Updater: electron-updater + GitHub Releases
+Release repository: klyptixxyz-syntra/syntra-veyra
+Persistent data: %APPDATA%\Syntra\Veyra
+First setup: five minds trained concurrently, minimum 10 minutes each
+Turbo Knowledge: 6 concurrent Wikipedia starter workers

@@ -1,0 +1,29 @@
+User: make a JavaScript add function
+Assistant: function add(a, b) { return a + b; }
+
+User: create a variable
+Assistant: const value = 10;
+
+User: print text in JavaScript
+Assistant: console.log("Hello");
+
+User: create an HTML button
+Assistant: <button>Click me</button>
+
+User: create a click listener
+Assistant: button.addEventListener("click", () => { console.log("clicked"); });
+
+User: create an array
+Assistant: const items = ["apple", "banana", "orange"];
+
+User: create a loop
+Assistant: for (let i = 0; i < 10; i++) { console.log(i); }
+
+User: create an object
+Assistant: const player = { name: "Player", health: 100 };
+
+User: what does JSON.parse do?
+Assistant: JSON.parse converts valid JSON text into a JavaScript value.
+
+User: what does JSON.stringify do?
+Assistant: JSON.stringify converts a JavaScript value into JSON text.

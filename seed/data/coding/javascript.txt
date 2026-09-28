@@ -1,0 +1,149 @@
+User: what is a variable in JavaScript
+Assistant: A variable stores a value. Use const when the binding should not be reassigned and let when reassignment is needed.
+
+User: how do I declare a constant in JavaScript
+Assistant: Use const, for example: const score = 10;
+
+User: how do I declare a variable in JavaScript
+Assistant: Use let when the value will change, for example: let score = 0;
+
+User: how do I print text in JavaScript
+Assistant: Use console.log("Hello");
+
+User: how do I make a function in JavaScript
+Assistant: Use a function declaration such as function add(a, b) { return a + b; }
+
+User: how do I make an arrow function
+Assistant: For example: const add = (a, b) => a + b;
+
+User: how do I make an array
+Assistant: For example: const items = ["apple", "banana", "orange"];
+
+User: how do I add to an array
+Assistant: Use push to add to the end, for example: items.push(value);
+
+User: how do I remove the last array item
+Assistant: Use pop, for example: const removed = items.pop();
+
+User: how do I loop through an array
+Assistant: Use for...of for values, for example: for (const item of items) { console.log(item); }
+
+User: how do I use map in JavaScript
+Assistant: Array.map creates a new array by transforming each item, for example: const doubled = numbers.map(n => n * 2);
+
+User: how do I use filter in JavaScript
+Assistant: Array.filter creates a new array containing items that pass a test, for example: const positive = numbers.filter(n => n > 0);
+
+User: how do I find an item in an array
+Assistant: Use find when you want the first matching item, for example: const user = users.find(u => u.id === targetId);
+
+User: how do I create an object
+Assistant: For example: const player = { name: "Player", health: 100 };
+
+User: how do I read an object property
+Assistant: Use dot notation such as player.health or bracket notation such as player['health'].
+
+User: what is JSON.parse
+Assistant: JSON.parse converts valid JSON text into a JavaScript value.
+
+User: what is JSON.stringify
+Assistant: JSON.stringify converts a JavaScript value into JSON text.
+
+User: what is an event listener
+Assistant: An event listener runs a function when an event occurs, such as a click, key press, or form submission.
+
+User: how do I add a click event
+Assistant: Use element.addEventListener("click", () => { /* action */ });
+
+User: how do I get an element by id
+Assistant: Use document.getElementById("elementId").
+
+User: how do I select an element with CSS selector
+Assistant: Use document.querySelector(".class-name") or another valid CSS selector.
+
+User: how do I change text in HTML with JavaScript
+Assistant: Set textContent, for example: element.textContent = "New text";
+
+User: how do I change HTML with JavaScript
+Assistant: Set innerHTML only when you control the content, for example: element.innerHTML = "<strong>Hello</strong>";
+
+User: how do I create an HTML element with JavaScript
+Assistant: Use document.createElement, for example: const div = document.createElement("div");
+
+User: how do I append an element
+Assistant: Use parent.appendChild(child) or parent.append(child).
+
+User: how do I remove an element
+Assistant: Use element.remove() when you no longer need that element.
+
+User: what is async await
+Assistant: async and await provide a readable way to work with promises. await pauses inside an async function until a promise settles.
+
+User: how do I fetch JSON
+Assistant: Use const response = await fetch(url); then const data = await response.json(); inside an async function.
+
+User: how do I handle errors with try catch
+Assistant: Put code that may fail inside try, then handle the error in catch.
+
+User: what is a promise
+Assistant: A promise represents a value that may become available later after an asynchronous operation finishes.
+
+User: what is localStorage
+Assistant: localStorage stores string data in the browser for the same site and keeps it after the page closes.
+
+User: how do I save JSON to localStorage
+Assistant: Use localStorage.setItem("key", JSON.stringify(value));
+
+User: how do I load JSON from localStorage
+Assistant: Use JSON.parse(localStorage.getItem("key") || "null").
+
+User: what is Node.js
+Assistant: Node.js runs JavaScript outside the browser and provides access to server, file, process, and networking features.
+
+User: how do I read a file in Node.js
+Assistant: Using fs: const text = fs.readFileSync("file.txt", "utf8");
+
+User: how do I write a file in Node.js
+Assistant: Using fs: fs.writeFileSync("file.txt", text, "utf8");
+
+User: how do I create an HTTP server in Node.js
+Assistant: Use the built-in http module and http.createServer, then call server.listen on a port.
+
+User: what is npm
+Assistant: npm is the package manager commonly installed with Node.js. It can install packages and run scripts from package.json.
+
+User: what is package.json
+Assistant: package.json stores project metadata, scripts, dependency declarations, and other Node.js project settings.
+
+User: what does npm start do
+Assistant: npm start runs the start script defined in package.json.
+
+User: what does npm run train do
+Assistant: npm run train runs the train script defined in package.json.
+
+User: what is a syntax error
+Assistant: A syntax error means the code does not follow the language grammar, such as a missing bracket, quote, or invalid token.
+
+User: what is a runtime error
+Assistant: A runtime error happens while code is running, even though the source code was valid enough to start.
+
+User: what is undefined in JavaScript
+Assistant: undefined usually means a value has not been assigned or a requested property does not exist.
+
+User: what is null in JavaScript
+Assistant: null is an explicit value commonly used to represent an intentional absence of a value.
+
+User: what is a boolean
+Assistant: A boolean has one of two values: true or false.
+
+User: what is a string
+Assistant: A string is text represented as a sequence of characters.
+
+User: what is a number in JavaScript
+Assistant: JavaScript Number is the main numeric type for integer and decimal calculations.
+
+User: what is NaN
+Assistant: NaN means Not-a-Number. It is a numeric value used when a numeric operation cannot produce a valid number.
+
+User: how do I check if a value is NaN
+Assistant: Use Number.isNaN(value) when you specifically want to test for the NaN value.

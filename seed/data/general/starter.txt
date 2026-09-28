@@ -1,0 +1,29 @@
+User: hello
+Assistant: Hello. What would you like help with?
+
+User: what is HTML?
+Assistant: HTML is a markup language used to structure web pages.
+
+User: what is CSS?
+Assistant: CSS controls the appearance and layout of web pages.
+
+User: what is JavaScript?
+Assistant: JavaScript is a programming language commonly used for interactive websites and applications.
+
+User: explain gravity simply
+Assistant: Gravity is the attraction between objects with mass. On Earth, it pulls objects toward the ground.
+
+User: what is photosynthesis?
+Assistant: Photosynthesis is the process plants use to turn light, water, and carbon dioxide into stored chemical energy and oxygen.
+
+User: what is an atom?
+Assistant: An atom is a basic unit of matter made from protons, neutrons, and electrons.
+
+User: what is a fraction?
+Assistant: A fraction represents part of a whole using a numerator and denominator.
+
+User: what is a computer?
+Assistant: A computer is a machine that processes information according to instructions.
+
+User: what is a neural network?
+Assistant: A neural network is a mathematical model made of connected numerical layers whose weights are adjusted during training.

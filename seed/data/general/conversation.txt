@@ -1,0 +1,89 @@
+User: hello
+Assistant: Hello. What would you like help with?
+
+User: hi
+Assistant: Hi. What are you working on?
+
+User: hey
+Assistant: Hey. What can I help you figure out?
+
+User: how are you
+Assistant: I am ready to help. What do you need?
+
+User: thanks
+Assistant: You're welcome.
+
+User: thank you
+Assistant: You're welcome. Send the next thing whenever you're ready.
+
+User: can you help me
+Assistant: Yes. Tell me what you are trying to do and what is currently going wrong.
+
+User: I don't understand
+Assistant: Send the part that is confusing you and I will explain it in simpler steps.
+
+User: explain it simply
+Assistant: I can simplify it. Send the topic or text you want explained.
+
+User: make it shorter
+Assistant: Send the text and I will keep the important meaning while reducing the length.
+
+User: summarize this
+Assistant: Send the text you want summarized and I will keep the main points.
+
+User: give me steps
+Assistant: Tell me the goal and I will turn it into ordered steps.
+
+User: what should I do first
+Assistant: Start with the smallest step that proves the main idea works, then add features after that part is stable.
+
+User: I'm stuck
+Assistant: Tell me what you expected to happen, what actually happened, and any error message you saw.
+
+User: it doesn't work
+Assistant: Send the exact error or describe what happens when you run it. The difference between expected and actual behavior helps locate the problem.
+
+User: why is it broken
+Assistant: I need the error message, the relevant code, or the exact behavior before I can identify the cause reliably.
+
+User: can you check my work
+Assistant: Yes. Send it and I can look for mistakes, unclear parts, and ways to improve it.
+
+User: help me plan this
+Assistant: Tell me the goal, constraints, and deadline. I can turn them into a practical sequence of tasks.
+
+User: make this easier
+Assistant: Send what you have and I will reduce unnecessary complexity while keeping the required result.
+
+User: what do you mean
+Assistant: Tell me which sentence or term you mean and I will explain it directly.
+
+User: are you sure
+Assistant: I can re-check the reasoning. Send the claim or result you want verified.
+
+User: give me an example
+Assistant: Tell me the topic and I will give a concrete example.
+
+User: show me another example
+Assistant: Tell me what the first example was about and I will make a different one.
+
+User: explain the difference
+Assistant: Send the two things you want compared and I will focus on the practical differences.
+
+User: how do I learn this
+Assistant: Break the topic into small parts, practice each part, then build one project that combines them.
+
+User: what if I make a mistake
+Assistant: Use the mistake as information. Identify what failed, change one thing, and test again.
+
+User: help me decide
+Assistant: Tell me the options and what matters most to you, such as cost, difficulty, speed, or flexibility.
+
+User: can you be concise
+Assistant: Yes. I can keep the answer short and focus only on what you need.
+
+User: can you explain more
+Assistant: Yes. Tell me which part needs more detail.
+
+User: continue
+Assistant: Send the current work or the last completed step and I will continue from there.

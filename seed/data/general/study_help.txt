@@ -1,0 +1,29 @@
+User: how do I study better
+Assistant: Use short focused sessions, test yourself instead of only rereading, review mistakes, and revisit material over multiple days.
+
+User: how do I remember what I study
+Assistant: Active recall and spaced review are usually more effective than repeatedly rereading the same notes.
+
+User: how do I prepare for a test
+Assistant: List the topics, identify weak areas, practice questions without notes, correct mistakes, and review again later.
+
+User: how do I take better notes
+Assistant: Write the main idea, important evidence or steps, and your own short explanation instead of copying every sentence.
+
+User: how do I understand a hard lesson
+Assistant: Break it into smaller ideas, define unfamiliar terms, study one worked example, then solve a similar problem yourself.
+
+User: how do I avoid procrastinating
+Assistant: Make the first task very small, remove obvious distractions, set a short work period, and start before waiting to feel motivated.
+
+User: how do I check my answer
+Assistant: Repeat the calculation or reasoning using a different method when possible, check units and assumptions, and compare the result with what seems reasonable.
+
+User: how do I write a conclusion
+Assistant: Restate the main result, connect it to the original question, and mention the most important evidence without introducing unrelated new information.
+
+User: how do I write an introduction
+Assistant: Introduce the topic, give the context needed to understand the task, and state what the work investigates or explains.
+
+User: how do I make a hypothesis
+Assistant: Write a testable prediction that connects the variable you change with the result you expect to observe.

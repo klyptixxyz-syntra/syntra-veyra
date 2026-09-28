@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veyra</title>
+<style>
+:root{
+  --bg:#f5f5f3;--panel:#ffffff;--panel2:#eeeeeb;--ink:#111;--muted:#777771;
+  --line:#ddddda;--line2:#c9c9c4;--dark:#171717;--soft:#f9f9f7;
+}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);overflow:hidden}
+button,select,textarea{font:inherit}
+button{cursor:pointer}
+.app{height:100%;display:grid;grid-template-columns:248px 1fr}
+.sidebar{background:#efefec;border-right:1px solid var(--line);padding:18px 14px;display:flex;flex-direction:column;min-height:0}
+.logo{display:flex;align-items:center;gap:11px;padding:4px 8px 18px}
+.logo-mark{width:32px;height:32px;border-radius:10px;background:#171717;color:white;display:grid;place-items:center;font-weight:900}
+.logo b{font-size:17px;letter-spacing:-.03em}.logo span{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.new-chat{width:100%;border:1px solid var(--line2);background:#fff;border-radius:11px;padding:10px 12px;text-align:left;font-weight:700}
+.side-section{margin-top:22px}.side-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8b8b84;padding:0 8px 8px;font-weight:800}
+.setting{padding:9px 8px;border-radius:9px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px}
+.setting:hover{background:#e6e6e2}
+select{border:1px solid var(--line);background:#fafaf8;border-radius:8px;padding:6px 8px;outline:none;color:#222;max-width:122px}
+.minds{display:grid;gap:6px;padding:0 8px}.mind{display:flex;gap:8px;align-items:center;color:#55554f;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:#c3c3be}.dot.ready{background:#333}
+.sidebar-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:12px}
+.side-btn{width:100%;border:0;background:transparent;border-radius:9px;padding:9px 8px;text-align:left;color:#55554f}.side-btn:hover{background:#e5e5e1;color:#111}
+.main{min-width:0;display:grid;grid-template-rows:60px 1fr auto;background:#fafaf8}
+.topbar{border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(250,250,248,.95);backdrop-filter:blur(10px)}
+.model-title{font-weight:800;letter-spacing:-.02em}.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px}.status-dot{width:7px;height:7px;border-radius:50%;background:#bcbcb7}.status-dot.ready{background:#222}
+.chat{overflow:auto;padding:34px 7vw 18px;scroll-behavior:smooth}
+.welcome{max-width:760px;margin:11vh auto 0;text-align:center}.welcome h1{font-size:42px;letter-spacing:-.055em;margin:0 0 10px;font-weight:750}.welcome p{margin:0;color:var(--muted);font-size:15px}
+.messages{max-width:860px;margin:0 auto;display:grid;gap:22px}
+.message{display:grid;grid-template-columns:30px 1fr;gap:12px;line-height:1.58}
+.avatar{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:12px;background:white}
+.message.user .avatar{background:#232323;color:#fff;border-color:#232323}
+.content{font-size:15px;white-space:pre-wrap;overflow-wrap:anywhere}
+.meta{font-size:11px;color:#999;margin-top:8px}
+.aratis-pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);background:#f1f1ee;border-radius:999px;padding:4px 8px}
+.composer-wrap{border-top:1px solid var(--line);padding:15px 24px 19px;background:#fafaf8}
+.composer{max-width:860px;margin:auto;border:1px solid var(--line2);background:#fff;border-radius:16px;box-shadow:0 7px 25px rgba(0,0,0,.04);padding:10px 10px 9px}
+textarea{display:block;width:100%;border:0;outline:0;resize:none;min-height:54px;max-height:180px;padding:7px 9px;background:transparent;color:#111}
+.compose-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:5px 3px 0}
+.hint{font-size:11px;color:#aaa}.send{border:0;background:#202020;color:white;border-radius:10px;padding:8px 14px;font-weight:800}
+.send:disabled{opacity:.35}
+.install{position:fixed;inset:0;background:#f5f5f3;z-index:50;display:none;align-items:center;justify-content:center;padding:30px}
+.install.show{display:flex}.install-card{width:min(760px,100%);background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.08)}
+.install-brand{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:#777;font-weight:900}.install h2{font-size:34px;letter-spacing:-.045em;margin:10px 0 7px}.install-desc{color:#777;margin-bottom:24px}
+.progress-list{display:grid;gap:13px}.progress-row{display:grid;grid-template-columns:150px 1fr 54px;gap:12px;align-items:center;font-size:13px}
+.track{height:8px;border-radius:999px;background:#ecece9;overflow:hidden}.fill{height:100%;background:#222;width:0;transition:width .3s}.pct{text-align:right;color:#777;font-variant-numeric:tabular-nums}
+.install-action{display:flex;justify-content:space-between;align-items:center;margin-top:23px}.install-note{font-size:12px;color:#888;max-width:460px}.start{border:0;background:#1d1d1d;color:white;border-radius:11px;padding:10px 16px;font-weight:800}
+.update-banner{position:fixed;right:20px;bottom:20px;background:#202020;color:#fff;border-radius:13px;padding:13px 15px;font-size:12px;display:none;z-index:60;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.update-banner.show{display:block}.update-banner button{margin-left:10px;border:1px solid #555;background:#fff;color:#111;border-radius:8px;padding:6px 8px}
+@media(max-width:800px){.app{grid-template-columns:1fr}.sidebar{display:none}.chat{padding-left:20px;padding-right:20px}.welcome h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="logo-mark">V</div><div><b>Veyra</b><span>by Syntra</span></div></div>
+    <button class="new-chat" id="newChat">＋ New chat</button>
+
+    <div class="side-section">
+      <div class="side-label">Model</div>
+      <div class="setting"><span>Veyra</span><select id="model">
+        <option value="neo">Neo</option>
+        <option value="cipher" selected>Cipher</option>
+        <option value="vanta">Vanta</option>
+        <option value="zenith">Zenith</option>
+      </select></div>
+      <div class="setting"><span>Effort</span><select id="effort">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+        <option value="extra_high">Extra High</option>
+        <option value="ultra">Ultra</option>
+        <option value="overdrive">Overdrive</option>
+      </select></div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-label">Five minds</div>
+      <div class="minds" id="mindList">
+        <div class="mind"><span class="dot" data-mind="general"></span>General</div>
+        <div class="mind"><span class="dot" data-mind="reasoning"></span>Reasoning</div>
+        <div class="mind"><span class="dot" data-mind="builder"></span>Builder</div>
+        <div class="mind"><span class="dot" data-mind="context"></span>Context</div>
+        <div class="mind"><span class="dot" data-mind="brainstem"></span>ARATIS Brainstem</div>
+      </div>
+    </div>
+
+    <div class="sidebar-bottom">
+      <button class="side-btn" id="updates">Check for updates</button>
+      <button class="side-btn" id="dataFolder">Open Veyra data</button>
+      <button class="side-btn" id="clearMemory">Clear memory</button>
+      <div style="padding:9px 8px 0;font-size:10px;color:#aaa" id="version">Veyra</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="model-title" id="topModel">Veyra Cipher</div>
+      <div class="status"><span class="status-dot" id="statusDot"></span><span id="statusText">Checking</span></div>
+    </header>
+    <section class="chat" id="chat">
+      <div class="welcome" id="welcome">
+        <h1>What are we working on?</h1>
+        <p>Veyra uses ARATIS to decide when to answer instantly and when to think harder.</p>
+      </div>
+      <div class="messages" id="messages"></div>
+    </section>
+    <footer class="composer-wrap">
+      <div class="composer">
+        <textarea id="prompt" placeholder="Message Veyra"></textarea>
+        <div class="compose-bottom">
+          <div class="hint" id="effortHint">Cipher · Medium effort</div>
+          <button class="send" id="send">Send</button>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<div class="install" id="install">
+  <div class="install-card">
+    <div class="install-brand">Syntra setup</div>
+    <h2>Build your Veyra.</h2>
+    <div class="install-desc">First setup trains five minds at the same time, builds starter knowledge with Turbo Download, then tests ARATIS. This setup is designed to run for at least 10 minutes. After it finishes, Veyra stays installed and future launches skip this screen.</div>
+    <div class="progress-list">
+      <div class="progress-row"><b>General Mind</b><div class="track"><div class="fill" data-fill="general"></div></div><div class="pct" data-pct="general">0%</div></div>
+      <div class="progress-row"><b>Reasoning Mind</b><div class="track"><div class="fill" data-fill="reasoning"></div></div><div class="pct" data-pct="reasoning">0%</div></div>
+      <div class="progress-row"><b>Builder Mind</b><div class="track"><div class="fill" data-fill="builder"></div></div><div class="pct" data-pct="builder">0%</div></div>
+      <div class="progress-row"><b>Context Mind</b><div class="track"><div class="fill" data-fill="context"></div></div><div class="pct" data-pct="context">0%</div></div>
+      <div class="progress-row"><b>ARATIS</b><div class="track"><div class="fill" data-fill="brainstem"></div></div><div class="pct" data-pct="brainstem">0%</div></div>
+      <div class="progress-row"><b>Knowledge</b><div class="track"><div class="fill" data-fill="knowledge"></div></div><div class="pct" data-pct="knowledge">0%</div></div>
+    </div>
+    <div class="install-action">
+      <div class="install-note" id="installNote">Training has not started yet. Internet is used only for starter knowledge and future updates.</div>
+      <button class="start" id="startSetup">Start setup</button>
+    </div>
+  </div>
+</div>
+
+<div class="update-banner" id="updateBanner"><span id="updateText"></span><button id="installUpdate" style="display:none">Restart & update</button></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const modelNames={neo:"Veyra Neo",cipher:"Veyra Cipher",vanta:"Veyra Vanta",zenith:"Veyra Zenith"};
+let busy=false;
+
+function syncSelectors(){
+  $("topModel").textContent=modelNames[$("model").value];
+  $("effortHint").textContent=`${modelNames[$("model").value].replace("Veyra ","")} · ${$("effort").selectedOptions[0].text} effort`;
+}
+$("model").onchange=syncSelectors;$("effort").onchange=syncSelectors;syncSelectors();
+
+function addMessage(type,text,meta){
+  $("welcome").style.display="none";
+  const row=document.createElement("div");row.className="message "+type;
+  const avatar=document.createElement("div");avatar.className="avatar";avatar.textContent=type==="user"?"Y":"V";
+  const wrap=document.createElement("div");
+  const content=document.createElement("div");content.className="content";content.textContent=text;
+  wrap.appendChild(content);
+  if(meta){const m=document.createElement("div");m.className="meta";m.innerHTML=meta;wrap.appendChild(m)}
+  row.append(avatar,wrap);$("messages").appendChild(row);$("chat").scrollTop=$("chat").scrollHeight;
+  return {row,content,wrap};
+}
+async function refresh(){
+  const s=await window.veyra.status();
+  if(!s.installed){
+    $("install").classList.add("show");
+    $("statusText").textContent="Setup required";
+    return;
+  }
+  $("install").classList.remove("show");
+  $("statusDot").classList.add("ready");$("statusText").textContent="Ready";
+  $("version").textContent="Veyra "+(s.version||"");
+  for(const mind of s.engine?.minds||[]){
+    const dot=document.querySelector(`[data-mind="${mind.id}"]`);
+    if(dot)dot.classList.toggle("ready",!!mind.ready);
+  }
+}
+async function send(){
+  const text=$("prompt").value.trim();if(!text||busy)return;
+  $("prompt").value="";busy=true;$("send").disabled=true;
+  addMessage("user",text);
+  const pending=addMessage("assistant","Thinking…");
+  try{
+    const r=await window.veyra.generate({prompt:text,model:$("model").value,effort:$("effort").value});
+    pending.content.textContent=r.text||"(no response)";
+    const a=r.aratis||{};
+    pending.wrap.insertAdjacentHTML("beforeend",`<div class="meta"><span class="aratis-pill">ARATIS · ${a.checkedOutcomes||0} checks · ${a.regretRisk??0}% regret risk</span> ${a.activeMinds?` · ${a.activeMinds.join(", ")}`:""}</div>`);
+  }catch(e){pending.content.textContent="Error: "+e.message}
+  finally{busy=false;$("send").disabled=false}
+}
+$("send").onclick=send;$("prompt").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send()}};
+$("newChat").onclick=()=>{$("messages").innerHTML="";$("welcome").style.display="block"};
+$("clearMemory").onclick=async()=>{await window.veyra.clearMemory();addMessage("assistant","Conversation memory cleared.")};
+$("dataFolder").onclick=()=>window.veyra.openData();
+$("updates").onclick=()=>window.veyra.checkUpdates();
+
+$("startSetup").onclick=async()=>{
+  $("startSetup").disabled=true;
+  $("installNote").textContent="Training all five minds in parallel. Keep Veyra open.";
+  await window.veyra.startSetup();
+};
+
+window.veyra.onEvent(ev=>{
+  if(ev.type==="mind-progress"){
+    const n=ev.mind,p=Math.max(0,Math.min(100,Math.round(ev.progress*100)));
+    document.querySelector(`[data-fill="${n}"]`).style.width=p+"%";
+    document.querySelector(`[data-pct="${n}"]`).textContent=p+"%";
+  }
+  if(ev.type==="mind-done"){
+    document.querySelector(`[data-fill="${ev.mind}"]`).style.width="100%";
+    document.querySelector(`[data-pct="${ev.mind}"]`).textContent="100%";
+  }
+  if(ev.type==="knowledge-progress"){
+    const p=Math.round(ev.progress*100);document.querySelector(`[data-fill="knowledge"]`).style.width=p+"%";document.querySelector(`[data-pct="knowledge"]`).textContent=p+"%";
+  }
+  if(ev.type==="aratis-test-start")$("installNote").textContent="Five minds finished. Testing ARATIS before first launch…";
+  if(ev.type==="setup-complete"){ $("installNote").textContent="Setup complete."; setTimeout(refresh,650) }
+  if(ev.type==="setup-error")$("installNote").textContent=ev.error;
+  if(ev.type==="update-available"){ $("updateText").textContent=`Veyra ${ev.version} is downloading…`;$("updateBanner").classList.add("show") }
+  if(ev.type==="update-progress"){ $("updateText").textContent=`Downloading update · ${Math.round(ev.percent)}%`;$("updateBanner").classList.add("show") }
+  if(ev.type==="update-ready"){ $("updateText").textContent=`Veyra ${ev.version} is ready.`;$("installUpdate").style.display="inline-block";$("updateBanner").classList.add("show") }
+  if(ev.type==="update-error"){ $("updateText").textContent="Update check failed. You can try again later.";$("updateBanner").classList.add("show") }
+});
+$("installUpdate").onclick=()=>window.veyra.installUpdate();
+
+refresh();
+</script>
+</body>
+</html>
